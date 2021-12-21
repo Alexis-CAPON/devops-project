@@ -47,7 +47,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       # Read instructions how to configure this action: https://github.com/marketplace/actions/deploy-to-heroku#getting-started
-      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+      - uses: AkhileshNS/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "alexis-app-cicd" # Must be unique in Heroku
