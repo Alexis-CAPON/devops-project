@@ -16,7 +16,7 @@ jobs:
     # Define `working-directory` if you application is in a subfolder
     defaults:
       run:
-        working-directory: assets/userapi
+        working-directory: userapi
      # Service containers to run with `runner-job`
     services:
       # Label used to access the service container
@@ -50,7 +50,6 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "Alexis" # Must be unique in Heroku
-          heroku_email: "alexisbizarreadventure@gmail.com" # Heroku account email
-          appdir: assets/userapi # Define appdir if you application is in a subfolder
-  
+          heroku_app_name: "alexis-app-cicd" # Must be unique in Heroku
+          heroku_email: "alexis.capon@edu.ece.fr" # Heroku account email
+          appdir: userapi # Define appdir if you application is in a subfolder
