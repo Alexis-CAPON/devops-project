@@ -213,7 +213,20 @@ minikube start
 minikube status
 ```
 
+
+-> Use
+
+
 ### 7. Make a service mesh using Istio
+
+-> Installation
+
+1. Install Minikube and start a Kubernetes cluster
+
+After Minikube installation run:
+
+- `minikube config set vm-driver virtualbox` (or `vmware`, or `kvm2`)
+
 
 
 ### 8. Implement Monitoring
