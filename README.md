@@ -156,7 +156,7 @@ Let's move on to next features.
 -> Uses
 
 Now go to iac/part-1 :
-``` cd iac/part-1```
+``` cd iac/part-1``` <br/>
 
 Next, run the command `vagrant up` to start it.
 
@@ -168,11 +168,11 @@ You can test it with the little provisioning script we provided, run :
 ```vagrant provision```
 
 So now, go to iac/part-2 directory : <br/>
-``` cd iac/part-2```
+``` cd iac/part-2``` <br/>
 <img src="image/iac-vagrantprovisioning.png" style="width:500px;"/>
 
-Start the VM :
-````vagrant up```
+Start the VM with :
+```vagrant up```
 
 
 You should go to 20.20.20.2
@@ -190,6 +190,23 @@ You should go to 20.20.20.2
 
 -> Use
 
+Next, build your image with this command :
+```docker build -t devops .```
+
+Then, run it 
+```docker run -p 3000:3000 devops```
+
+You can go on https://localhost:3000 and you will see "Hello Wolrd! Alexis here!"
+
+As you can see on this screen :
+<img src="image/docker-image.png" style="width:500px;"/>
+
+
+My docker image is on Docker Hub.<br/>
+<img src="image/docker-hub.png" style="width:500px;"/>
+<br/>You can retrieve it from : <br/>
+
+```docker pull alexiscapon/devops-project```
 
 ### 5. Make container orchestration using Docker Compose
 

@@ -6,4 +6,4 @@ services:
     build: .
     ports:
       - "5000:8080"
-    image: docker-compose-version2
+    image: alexiscapon/devops-project
