@@ -5,5 +5,5 @@ services:
   web:
     build: .
     ports:
-      - "5000:8080"
+      - "3000:3000"
     image: alexiscapon/devops-project
