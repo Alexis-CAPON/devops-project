@@ -168,15 +168,26 @@ You can test it with the little provisioning script we provided, run :
 ```vagrant provision```
 
 So now, go to iac/part-2 directory : <br/>
+``` cd iac/part-2```
+<img src="image/iac-vagrantprovisioning.png" style="width:500px;"/>
 
 Start the VM :
 ````vagrant up```
 
 
-
+You should go to 20.20.20.2
 
 
 ### 4. Build Docker image
+-> Installation
+
+1. Install [Docker Desktop](https://www.docker.com/get-started) following the instructions depending on your OS.
+2. Make sure your docker installation is working properly by running the following command in a terminal:
+  ```
+  docker run hello-world
+  ```
+
+-> Use
 
 
 ### 5. Make container orchestration using Docker Compose
