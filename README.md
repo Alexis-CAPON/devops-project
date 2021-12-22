@@ -144,6 +144,37 @@ Let's move on to next features.
 
 ### 3. IaC approach
 
+-> Installation
+
+1. You need to install a virtual machine, for example you can take VirtualBox : https://www.virtualbox.org/wiki/Downloads
+2. Instlal Vagrant on your computer : https://www.vagrantup.com/downloads.html
+3. Next, we will use centos as a linux distribution, to do this, run : <br/>
+```vagrant box add centos/7```
+
+4. Next, choose your provider, I personnaly used parallels, it's for Mac Only.
+
+-> Uses
+
+Now go to iac/part-1 :
+``` cd iac/part-1```
+
+Next, run the command `vagrant up` to start it.
+
+Ensure that all this working by typing `vagrant status`.
+
+Your VM is created and up. <br/>
+
+You can test it with the little provisioning script we provided, run :
+```vagrant provision```
+
+So now, go to iac/part-2 directory : <br/>
+
+Start the VM :
+````vagrant up```
+
+
+
+
 
 ### 4. Build Docker image
 
