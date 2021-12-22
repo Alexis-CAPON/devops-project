@@ -179,6 +179,7 @@ You should go to 20.20.20.2
 
 
 ### 4. Build Docker image
+
 -> Installation
 
 1. Install [Docker Desktop](https://www.docker.com/get-started) following the instructions depending on your OS.
@@ -193,8 +194,24 @@ You should go to 20.20.20.2
 ### 5. Make container orchestration using Docker Compose
 
 
+
 ### 6. Make docker orchestration using Kubernetes
 
+-> Installation
+
+1. Install [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) following the instructions depending on your OS.
+
+2. Start Minikube with:
+
+```
+minikube start
+```
+
+3. Verify that everything is OK with:
+
+```
+minikube status
+```
 
 ### 7. Make a service mesh using Istio
 

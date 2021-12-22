@@ -38,5 +38,5 @@ Vagrant.configure("2") do |config|
     ansible.tags = "install"
   end
 
-  config.vm.synced_folder ".", "/home/vagrant/app", type:"parallels"
+  config.vm.synced_folder "../userapi", "/home/userapi"
 end
