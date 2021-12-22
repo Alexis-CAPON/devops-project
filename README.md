@@ -126,7 +126,7 @@ Inside the Deploy tab, scroll to Deployment method and connect your Github accou
 5. Go to Settings, in Config Vars category, "Reveal Config Vars" :<br/>
 Add a new one, in the KEY part, put : `PROJECT_PATH` and in value, put : `userapi` (the subfolder in what contain your code).
 
-<img src="image/cd-configvar.PNG" style="width:800px;"/>
+<img src="image/cd-configvar.png" style="width:800px;"/>
 
 6. Next, you will need to provide a buildpack, so click on the button add buildpack and select `heroku/nodejs`.
 Add another buildpack but this time, you this url : `https://github.com/timanovsky/subdir-heroku-buildpack.git`. <br/>
