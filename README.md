@@ -314,4 +314,4 @@ This project was made by Alexis CAPON and Cyril PEREZ.
 
 ## Additional info
 
-Feel free to ask us questions by mail or directly on github !
+Feel free to ask us questions by mail or directly on github !!
