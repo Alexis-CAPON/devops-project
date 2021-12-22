@@ -147,7 +147,7 @@ Let's move on to next features.
 -> Installation
 
 1. You need to install a virtual machine, for example you can take VirtualBox : https://www.virtualbox.org/wiki/Downloads
-2. Instlal Vagrant on your computer : https://www.vagrantup.com/downloads.html
+2. Install Vagrant on your computer : https://www.vagrantup.com/downloads.html
 3. Next, we will use centos as a linux distribution, to do this, run : <br/>
 ```vagrant box add centos/7```
 
@@ -203,7 +203,7 @@ As you can see on this screen :
 
 
 My docker image is on Docker Hub.<br/>
-<img src="image/docker-hub.png" style="width:500px;"/>
+<img src="image/docker-hub.png" style="width:800px;"/>
 <br/>You can retrieve it from : <br/>
 
 ```docker pull alexiscapon/devops-project```
@@ -240,6 +240,31 @@ minikube status
 
 -> Use
 
+Run the pod configuration :
+```kubectl apply -f assets/emptyDir/deployment.yml```
+
+List all the pods and find a name of a created pod
+
+```kubectl get pods```
+
+Enter to the container:
+
+```kubectl exec -it <POD_NAME> bash```
+
+Next, run ```curl localhost:3000```
+
+It should appear a answer :
+
+<img src="image/k8s-pods.png" style="width:500px;"/>
+
+As you can see, you have also files of image inside.
+
+Now, to verify if all is working, exit the VM and in your terminal, enter :
+````minikube dashboard```
+
+
+<img src="image/k8s-dashboard.png" style="width:1000px;"/>
+
 
 ### 7. Make a service mesh using Istio
 
@@ -254,7 +279,7 @@ After Minikube installation run:
 
 
 ### 8. Implement Monitoring
-
+  az
 
 
 ## 4. Links
