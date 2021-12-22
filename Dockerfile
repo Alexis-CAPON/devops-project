@@ -1,10 +1,13 @@
 FROM node:12
 
-WORKDIR /app
-COPY . .
+WORKDIR /usr/src/app
 
+COPY package*.json ./
 
 RUN npm install
 
+COPY ..
 
-CMD [ "node", "/app/userapi/src/index.js" ]
+EXPOSE 3000
+
+CMD [ "npm", "start" ]
