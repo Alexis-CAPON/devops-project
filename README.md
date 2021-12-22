@@ -210,7 +210,14 @@ My docker image is on Docker Hub.<br/>
 
 ### 5. Make container orchestration using Docker Compose
 
+-> Use
 
+Run it with : <br/>
+```docker-compose up```
+
+Go check if it's work on https://localhost:3000
+
+<img src="image/dockercompose.png" style="width:500px;"/>
 
 ### 6. Make docker orchestration using Kubernetes
 
