@@ -1,15 +1,19 @@
 # DevOps Project
 
-## 1. Functionality
+## Main features
 
-1. Start a web server
-2. Create a user
+1. Web App
+2. CI/CD
+3. Virtual environment and IaC approch
+4. Build Docker image
+5. Container orchestration using Docker Compose
+6. Docker orchestration using Kubernetes
 
-## 2. Screenschots
+## Screenschots
 
 All screenshots of proof of working features are provided in the instructions section bellow. Good reading ;)
 
-## 3. Instructions (with screenshots)
+## Instructions (with screenshots)
 
 You are in the instruction section, we will install and run all features one by one for testing.
 Features are numbered from 1 to 8 and instructions will be organized for each as follow :
@@ -17,7 +21,8 @@ Features are numbered from 1 to 8 and instructions will be organized for each as
  - Example of utilization
  - Test of its good working
 
-*  Before we start, you should have an IDE or a text editor installed, see [Atom](https://atom.io/) or [VS Code](https://code.visualstudio.com/).
+
+<br/>Before we start, you should have an IDE or a text editor installed, see [Atom](https://atom.io/) or [VS Code](https://code.visualstudio.com/).
 
 * We will use Yarn to install and use features, you can install it through the npm package manager :
 `npm install --global yarn`
@@ -30,7 +35,7 @@ Features are numbered from 1 to 8 and instructions will be organized for each as
   ```
 
 
-### 1. Create a web application
+## 1. Create a web application
 
 -> Installation
 
@@ -79,7 +84,7 @@ If you go on *localhost:3000*, you will see "Hello World!" as configured in the 
 
 
 
-### 2. Apply CI/CD pipeline
+## 2. Apply CI/CD pipeline
 
 The Continuous Integration (CI) will be done with Github Actions.
 The .yml file is in `.github/workflows` folder.
@@ -90,7 +95,7 @@ Go to GitHub -> Actions page and check if the test are done.
 Continuous Delivery (CD) was done thanks to Heroku.
 You can click on `alexis-app-cicd` to see my active deployment on Heroku. <br/> Or by clicking on this link : https://alexis-app-cicd.herokuapp.com/
 
-Here :
+Here :<br/>
 <img src="image/cd-env.png" style="width:300px;"/>
 
 You should see this my app ('Hello world!' for now, maybe something else later):
@@ -142,7 +147,7 @@ Let's move on to next features.
 
 
 
-### 3. IaC approach
+## 3. IaC approach
 
 -> Installation
 
@@ -178,7 +183,7 @@ Start the VM with :
 You should go to 20.20.20.2
 
 
-### 4. Build Docker image
+## 4. Build Docker image
 
 -> Installation
 
@@ -202,13 +207,13 @@ As you can see on this screen :
 <img src="image/docker-image.png" style="width:500px;"/>
 
 
-My docker image is on Docker Hub.<br/>
+My docker image is on [Docker Hub](https://hub.docker.com/repository/docker/alexiscapon/devops-project).<br/>
 <img src="image/docker-hub.png" style="width:800px;"/>
 <br/>You can retrieve it from : <br/>
 
 ```docker pull alexiscapon/devops-project```
 
-### 5. Make container orchestration using Docker Compose
+## 5. Make container orchestration using Docker Compose
 
 -> Use
 
@@ -219,7 +224,7 @@ Go check if it's work on https://localhost:3000
 
 <img src="image/dockercompose.png" style="width:500px;"/>
 
-### 6. Make docker orchestration using Kubernetes
+## 6. Make docker orchestration using Kubernetes
 
 -> Installation
 
@@ -241,7 +246,7 @@ minikube status
 -> Use
 
 Run the pod configuration :
-```kubectl apply -f assets/emptyDir/deployment.yml```
+```kubectl apply -f k8s/full.yml```
 
 List all the pods and find a name of a created pod
 
@@ -266,7 +271,7 @@ Now, to verify if all is working, exit the VM and in your terminal, enter :
 <img src="image/k8s-dashboard.png" style="width:1000px;"/>
 
 
-### 7. Make a service mesh using Istio
+## 7. Make a service mesh using Istio
 
 -> Installation
 
@@ -276,31 +281,37 @@ After Minikube installation run:
 
 - `minikube config set vm-driver virtualbox` (or `vmware`, or `kvm2`)
 
+I didn't succeed to fully deploy Istio. I provided in the `istio` folder two files, app.yaml (to deploy differents version of the app and services, that's the part working) and a network.yaml (to open gateway, that's the part not working).<br/>
+[app v2](https://hub.docker.com/repository/docker/alexiscapon/devops-project-v2)
+<br/><br/>
 
+## 8. Implement Monitoring
 
-### 8. Implement Monitoring
-  az
+Since we have deployed Istio successfully, it's simple to deployed Prometheus and Grafana. As I done in the lab 10.
+<br/><br/>
 
-
-## 4. Links
+## Links
 
 First of all, if something is not clear in installing or using something, be free to check : https://github.com/adaltas/ece-devops-2021-fall/tree/master/courses/devops/modules <br/>
 
 And navigate in labs category of what you need !
 
-Here are a list of link you will need to follow this "tutorial" :
-- 
-- 
-- 
+Here are a list of my link you will need to follow this "tutorial" :
+
+- https://alexis-app-cicd.herokuapp.com/
+- https://hub.docker.com/repository/docker/alexiscapon/devops-project
 
 
-## 5. Author
+<br/>
+
+## Author
 
 This project was made by Alexis CAPON and Cyril PEREZ.
 
 - alexis.capon@edu.ece.fr
 - cyril.perez@edu.ece.fr
+<br/><br/>
 
-## 6. Additional info
+## Additional info
 
 Feel free to ask us questions by mail or directly on github !
